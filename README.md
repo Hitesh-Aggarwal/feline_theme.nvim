@@ -11,8 +11,6 @@ This is a feline configuration based on [one_monokai](https://github.com/cpea250
 
 <img src="./screenshot.png">
 
-(_Note:_ It also shows lsp diagnostics (if there are any) alongside the filename, though not displayed in screenshot.)
-
 ## Installation:
 
 ### Packer:
