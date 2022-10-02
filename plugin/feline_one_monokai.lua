@@ -85,6 +85,9 @@ local c = {
     left_sep = "block",
     right_sep = "right_filled",
   },
+  separator = {
+    provider = "",
+  },
   diagnostic_errors = {
     provider = "diagnostic_errors",
     hl = {
@@ -167,6 +170,7 @@ local left = {
   c.gitDiffAdded,
   c.gitDiffRemoved,
   c.gitDiffChanged,
+  c.separator,
 }
 
 local middle = {
