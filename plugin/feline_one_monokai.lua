@@ -83,14 +83,10 @@ local c = {
       bg = "darkblue",
     },
     left_sep = "block",
-    right_sep = "block",
+    right_sep = "right_filled",
   },
   separator = {
     provider = "",
-    hl = {
-      bg = "darkblue",
-    },
-    right_sep = "right_filled",
   },
   diagnostic_errors = {
     provider = "diagnostic_errors",
