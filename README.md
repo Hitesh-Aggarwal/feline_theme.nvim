@@ -22,7 +22,7 @@ use "Hitesh-Aggarwal/feline_one_monokai.nvim"
 ### vim-plug:
 
 ```
-Plug "Hitesh-Aggarwal/feline_one_monokai.nvim"
+Plug 'Hitesh-Aggarwal/feline_one_monokai.nvim'
 ```
 
 ### Contribute
