@@ -25,7 +25,8 @@ This is a feline configuration that supports various themes. Default theme is [t
 use {
   "Hitesh-Aggarwal/feline_theme.nvim"
   config = function()
-    require("feline_theme").setup("tokyonight") -- or any other colorscheme.
+    require("feline_theme").setup() -- for tokyonight
+    -- require("feline_theme").setup("gruvbox") -- for any other colorscheme
   end
 }
 ```
@@ -38,7 +39,8 @@ Plug 'Hitesh-Aggarwal/feline_theme.nvim'
 " Anywhere in your config:
 lua << EOF
   config = function()
-    require("feline_theme").setup("tokyonight") -- or any other colorscheme.
+    require("feline_theme").setup() -- for tokyonight
+    -- require("feline_theme").setup("gruvbox") -- for any other colorscheme
   end
 EOF
 ```
@@ -48,7 +50,8 @@ EOF
 return {
   "Hitesh-Aggarwal/feline_theme.nvim",
   config = function()
-    require("feline_theme").setup("tokyonight") -- or any other colorscheme.
+    require("feline_theme").setup() -- for tokyonight
+    -- require("feline_theme").setup("gruvbox") -- for any other colorscheme
   end
 }
 ```
