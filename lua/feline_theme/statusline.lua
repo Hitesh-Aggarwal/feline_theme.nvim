@@ -4,14 +4,10 @@ local provide = require("feline_theme.utils").provide
 
 local isTSavailable = function()
 	local ts_ok, ts = pcall(require, "nvim-treesitter.parsers")
-	if not ts_ok then
-		print("Treesitter is not available")
-		return false
-	elseif not ts.has_parser() then
-		print("Treesitter parser for current buffer is not available")
-		return false
+	if ts_ok then
+		return ts.has_parser
 	else
-		return true
+		return false
 	end
 end
 

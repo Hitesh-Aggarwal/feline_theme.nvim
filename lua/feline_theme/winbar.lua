@@ -1,25 +1,19 @@
 local M = {}
 
-local navic_ok, navic = pcall(require, "nvim-navic")
-if not navic_ok then
-  print("navic is not available")
-elseif not navic.is_available() then
-  print("Navic is not attatched to buffer")
-end
-
 local is_navic_available = function()
-	if not navic_ok then
-		return false
-	else
+	local navic_ok, navic = pcall(require, "nvim-navic")
+	if navic_ok then
 		return navic.is_available
+	else
+    return false
 	end
 end
 
 local give_navic = function()
-	if not navic_ok then
+	if not is_navic_available() then
 		return ""
 	else
-		return navic.get_location
+		return require("nvim-navic").get_location
 	end
 end
 
@@ -34,7 +28,15 @@ M.active = {
 		"",
 		{ str = "", hl = { fg = "bg_dark", bg = "bg_dark" } }
 	),
-	provide(" ", "fg", "bg_dark", "NONE", "", { str = "slant_left_thin", hl = { bg = "bg_dark" } }, is_navic_available()),
+	provide(
+		" ",
+		"fg",
+		"bg_dark",
+		"NONE",
+		"",
+		{ str = "slant_left_thin", hl = { bg = "bg_dark" } },
+		is_navic_available()
+	),
 	provide(
 		give_navic(),
 		"fg",
