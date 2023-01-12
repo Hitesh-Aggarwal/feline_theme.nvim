@@ -5,7 +5,7 @@ local provide = require("feline_theme.utils").provide
 local isTSavailable = function()
 	local ts_ok, ts = pcall(require, "nvim-treesitter.parsers")
 	if ts_ok then
-		return ts.has_parser
+		return ts.has_parser()
 	else
 		return false
 	end
@@ -34,7 +34,7 @@ M.left = {
 }
 
 M.right = {
-	provide("綠TS", "green", "bg", "bold", "", "block", isTSavailable()),
+	provide("綠TS", "green", "bg", "bold", "", "block", isTSavailable),
 	provide("lsp_client_names", "fg_dark", "bg", "NONE", "block", "block"),
 	provide("position", "green", "bg", "NONE", "block", "block"),
 	provide("line_percentage", "orange", "bg", "NONE", "block", "block"),
