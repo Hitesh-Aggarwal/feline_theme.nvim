@@ -25,7 +25,7 @@ M.setup = function(opts)
 	if not feline_ok then
 		return
 	end
-	opts = opts or "tokyonight"
+	opts = opts or "tokyonight_moon"
 	local modename = "feline_theme.colorschemes." .. opts
 	local theme_ok, used_theme = pcall(require, modename)
 	if not theme_ok then

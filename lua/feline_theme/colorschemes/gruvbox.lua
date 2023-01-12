@@ -1,7 +1,7 @@
 return {
   fg = "#a89984",
-  bg = "#282828",
-  bg_dark = "#1d2021",
+  bg = "#1d2021",
+  bg_dark = "#282828",
   green = "#98971a",
   yellow = "#d79921",
   purple = "#b16286",
