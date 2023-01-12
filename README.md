@@ -1,12 +1,13 @@
-# feline_one_monokai.nvim
+# feline_theme.nvim
 
-This is a feline configuration based on [one_monokai](https://github.com/cpea2506/one_monokai.nvim) colorscheme.
+This is a feline configuration that supports various themes. Default theme is [tokyonight](https://github.com/folke/tokyonight.nvim)
 
 ## Requirements:
 
 - Neovim >= 0.8
 - [feline.nvim](https://github.com/feline-nvim/feline.nvim)
-- [nvim-navic](https://github.com/SmiteshP/nvim-navic)
+- [nvim-navic](https://github.com/SmiteshP/nvim-navic) (optional)
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) (optional)
 
 ## Screenshots:
 
@@ -21,15 +22,37 @@ This is a feline configuration based on [one_monokai](https://github.com/cpea250
 ### Packer:
 
 ```
-use "Hitesh-Aggarwal/feline_one_monokai.nvim"
+use {
+  "Hitesh-Aggarwal/feline_theme.nvim"
+  config = function()
+    require("feline_theme").setup("tokyonight") -- or any other colorscheme.
+  end
+}
 ```
 
 ### vim-plug:
 
 ```
-Plug 'Hitesh-Aggarwal/feline_one_monokai.nvim'
+Plug 'Hitesh-Aggarwal/feline_theme.nvim'
+
+" Anywhere in your config:
+lua << EOF
+  config = function()
+    require("feline_theme").setup("tokyonight") -- or any other colorscheme.
+  end
+EOF
+```
+
+### Lazy:
+```
+return {
+  "Hitesh-Aggarwal/feline_theme.nvim",
+  config = function()
+    require("feline_theme").setup("tokyonight") -- or any other colorscheme.
+  end
+}
 ```
 
 ### Contribute
 
-**Please consider raising a pull request for improvements.**
+**Please consider raising a pull request for improvements, and help me add more colorschemes.**
