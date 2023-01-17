@@ -1,6 +1,6 @@
 return {
   fg = "#a89984",
-  bg = "#1d2021",
+  bg = "#32302f",
   bg_dark = "#282828",
   green = "#98971a",
   yellow = "#d79921",
