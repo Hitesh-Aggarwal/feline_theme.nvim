@@ -1,3 +1,7 @@
+local feline_ok, feline = pcall(require, "feline")
+if not feline_ok then
+	return
+end
 local components = {
 	active = {
 		require("feline_theme.statusline").left,
@@ -21,10 +25,6 @@ local components_winbar = {
 local M = {}
 
 M.setup = function(opts)
-	local feline_ok, feline = pcall(require, "feline")
-	if not feline_ok then
-		return
-	end
 	opts = opts or "tokyonight_moon"
 	local modename = "feline_theme.colorschemes." .. opts
 	local theme_ok, used_theme = pcall(require, modename)
@@ -36,7 +36,9 @@ M.setup = function(opts)
 		components = components,
 		theme = used_theme,
 	})
+end
 
+M.winbar_setup = function()
 	feline.winbar.setup({ components = components_winbar })
 end
 
