@@ -27,6 +27,7 @@ use {
   config = function()
     require("feline_theme").setup() -- for tokyonight
     -- require("feline_theme").setup("gruvbox") -- for any other colorscheme
+    require("feline_theme").setup_winbar() -- for the winbar
   end
 }
 ```
@@ -41,6 +42,7 @@ lua << EOF
   config = function()
     require("feline_theme").setup() -- for tokyonight
     -- require("feline_theme").setup("gruvbox") -- for any other colorscheme
+    require("feline_theme").setup_winbar() -- for the winbar
   end
 EOF
 ```
@@ -52,6 +54,7 @@ return {
   config = function()
     require("feline_theme").setup() -- for tokyonight
     -- require("feline_theme").setup("gruvbox") -- for any other colorscheme
+    require("feline_theme").setup_winbar() -- for the winbar
   end
 }
 ```

@@ -38,7 +38,7 @@ M.setup = function(opts)
 	})
 end
 
-M.winbar_setup = function()
+M.setup_winbar = function()
 	feline.winbar.setup({ components = components_winbar })
 end
 
