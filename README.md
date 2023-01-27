@@ -22,6 +22,7 @@ This is a feline opinionated feline config designed to be used as a plugin. It a
 ## Installation:
 
 ### Note: Make sure that you always load your colorscheme first.
+#### Anoter Note: You can't use only winbar. That will not work.
 
 ### Packer:
 
@@ -64,6 +65,39 @@ return {
     require("feline_theme").setup_winbar() -- for winbar
   end
 }
+```
+
+### Configuration:
+
+```
+local format = function(arg)
+  return "#" .. string.format("%06x", arg)
+end
+
+local giv_foreground = function(group)
+  return format(get_hl(group, true).foreground)
+end
+
+local giv_background = function(group)
+  return format(get_hl(group, true).background)
+end
+
+require("feline_theme").setup({
+  fg = giv_foreground("Normal"),
+  bg = giv_background("CursorLine"),
+  bg_dark = giv_background("Normal"),
+  green = giv_foreground("DiffAdded"),
+  yellow = giv_foreground("WarningMsg"),
+  purple = giv_foreground("Special"),
+  orange = giv_foreground("Number"),
+  red = giv_foreground("Error"),
+  blue = giv_foreground("Title"),
+  -- these are the defaults. You can change any color.
+  -- Do add or remove any other colors. Just change the values
+  -- of these predefined colors.
+  -- For example:
+  -- red = "#ff0000"
+})
 ```
 
 ## Contribute
