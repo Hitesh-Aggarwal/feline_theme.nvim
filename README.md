@@ -1,6 +1,6 @@
 # feline_theme.nvim
 
-This is a feline opinionated feline config designed to be used as a plugin. It automatically picks colors from applied colorscheme.
+This is a opinionated feline config designed to be used as a plugin. It automatically picks colors from applied colorscheme.
 
 ## Requirements:
 
