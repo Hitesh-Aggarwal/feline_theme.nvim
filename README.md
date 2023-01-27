@@ -57,6 +57,7 @@ return {
   "Hitesh-Aggarwal/feline_theme.nvim",
   -- dependencies = {
   --   [[ Applied colorscheme here ]]
+  -- Or you can set the priority of your colorscheme to 1000 so that it loads first.
   -- }
   config = function()
     require("feline_theme").setup() -- for statusline
