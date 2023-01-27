@@ -1,6 +1,6 @@
 # feline_theme.nvim
 
-This is a feline configuration that supports various themes. Default theme is [tokyonight](https://github.com/folke/tokyonight.nvim)
+This is a feline opinionated feline config designed to be used as a plugin. It automatically picks colors from applied colorscheme.
 
 ## Requirements:
 
@@ -12,22 +12,26 @@ This is a feline configuration that supports various themes. Default theme is [t
 ## Screenshots:
 
 #### Statusline
+
 <img src="./screenshot.png">
 
 #### Winbar
+
 <img src="./winbar.png">
 
 ## Installation:
+
+### Note: Make sure that you always load your colorscheme first.
 
 ### Packer:
 
 ```
 use {
-  "Hitesh-Aggarwal/feline_theme.nvim"
+  "Hitesh-Aggarwal/feline_theme.nvim",
+  -- after = [Applied colorscheme here]
   config = function()
-    require("feline_theme").setup() -- for tokyonight
-    -- require("feline_theme").setup("gruvbox") -- for any other colorscheme
-    require("feline_theme").setup_winbar() -- for the winbar
+    require("feline_theme").setup() -- for statusline
+    require("feline_theme").setup_winbar() -- for winbar
   end
 }
 ```
@@ -40,25 +44,27 @@ Plug 'Hitesh-Aggarwal/feline_theme.nvim'
 " Anywhere in your config:
 lua << EOF
   config = function()
-    require("feline_theme").setup() -- for tokyonight
-    -- require("feline_theme").setup("gruvbox") -- for any other colorscheme
-    require("feline_theme").setup_winbar() -- for the winbar
+    require("feline_theme").setup() -- for statusline
+    require("feline_theme").setup_winbar() -- for winbar
   end
 EOF
 ```
 
 ### Lazy:
+
 ```
 return {
   "Hitesh-Aggarwal/feline_theme.nvim",
+  -- dependencies = {
+  --   [[ Applied colorscheme here ]]
+  -- }
   config = function()
-    require("feline_theme").setup() -- for tokyonight
-    -- require("feline_theme").setup("gruvbox") -- for any other colorscheme
-    require("feline_theme").setup_winbar() -- for the winbar
+    require("feline_theme").setup() -- for statusline
+    require("feline_theme").setup_winbar() -- for winbar
   end
 }
 ```
 
-### Contribute
+## Contribute
 
-**Please consider raising a pull request for improvements, and help me add more colorschemes.**
+**Please consider raising a pull request for improvements**
