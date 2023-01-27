@@ -27,7 +27,7 @@ M.left = {
 	provide("git_diff_removed", "red"),
 	provide("git_diff_changed", "fg"),
 	provide(" ", "fg", "bg", "NONE", "block", "block"),
-	provide("diagnostic_errors", "dark_red"),
+	provide("diagnostic_errors", "red"),
 	provide("diagnostic_warnings", "yellow"),
 	provide("diagnostic_hints", "blue"),
 	provide("diagnostic_info"),
@@ -35,7 +35,7 @@ M.left = {
 
 M.right = {
 	provide("綠TS", "green", "bg", "bold", "", "block", isTSavailable),
-	provide("lsp_client_names", "fg_dark", "bg", "NONE", "block", "block"),
+	provide("lsp_client_names", "fg", "bg", "NONE", "block", "block"),
 	provide("position", "green", "bg", "NONE", "block", "block"),
 	provide("line_percentage", "orange", "bg", "NONE", "block", "block"),
 	provide(" ", "blue", "blue"),

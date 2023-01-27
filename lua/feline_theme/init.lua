@@ -24,14 +24,34 @@ local components_winbar = {
 
 local M = {}
 
-M.setup = function(opts)
-	opts = opts or "tokyonight_moon"
-	local modename = "feline_theme.colorschemes." .. opts
-	local theme_ok, used_theme = pcall(require, modename)
-	if not theme_ok then
-		print(opts .. " theme not found")
-		return
-	end
+local get_hl = vim.api.nvim_get_hl_by_name
+
+local format = function (arg)
+  return "#" .. string.format("%06x", arg)
+end
+
+local giv_foreground = function(group)
+  return format(get_hl(group,true).foreground)
+end
+
+local giv_background = function(group)
+  return format(get_hl(group,true).background)
+end
+
+local used_theme = {
+  fg = giv_foreground("Normal"),
+  bg = giv_background("CursorLine"),
+  bg_dark = giv_background("Normal"),
+  green = giv_foreground("DiffAdded"),
+  yellow = giv_foreground("WarningMsg"),
+  purple = giv_foreground("Special"),
+  orange = giv_foreground("Number"),
+  red = giv_foreground("Error"),
+  blue = giv_foreground("Title"),
+}
+
+
+M.setup = function()
 	feline.setup({
 		components = components,
 		theme = used_theme,
