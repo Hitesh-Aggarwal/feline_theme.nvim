@@ -6,7 +6,6 @@ This is a opinionated feline config designed to be used as a plugin. It automati
 
 - Neovim >= 0.8
 - [feline.nvim](https://github.com/feline-nvim/feline.nvim)
-- [nvim-navic](https://github.com/SmiteshP/nvim-navic) (optional)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) (optional)
 
 ## Screenshots:
@@ -15,14 +14,9 @@ This is a opinionated feline config designed to be used as a plugin. It automati
 
 <img src="./screenshot.png">
 
-#### Winbar
-
-<img src="./winbar.png">
-
 ## Installation:
 
 ### Note: Make sure that you always load your colorscheme first.
-#### Anoter Note: You can't use only winbar. That will not work.
 
 ### Packer:
 
@@ -32,7 +26,6 @@ use {
   -- after = [Applied colorscheme here]
   config = function()
     require("feline_theme").setup() -- for statusline
-    -- require("feline_theme").setup_winbar() -- for winbar
   end
 }
 ```
@@ -46,7 +39,6 @@ Plug 'Hitesh-Aggarwal/feline_theme.nvim'
 lua << EOF
   config = function()
     require("feline_theme").setup() -- for statusline
-    -- require("feline_theme").setup_winbar() -- for winbar
   end
 EOF
 ```
@@ -62,7 +54,6 @@ return {
   -- }
   config = function()
     require("feline_theme").setup() -- for statusline
-    -- require("feline_theme").setup_winbar() -- for winbar
   end
 }
 ```

@@ -13,15 +13,6 @@ local components = {
   },
 }
 
-local components_winbar = {
-  active = {
-    require("feline_theme.winbar").active,
-  },
-  inactive = {
-    require("feline_theme.winbar").inactive,
-  },
-}
-
 local M = {}
 
 local get_hl = function(group)
@@ -81,10 +72,6 @@ M.setup = function(opts)
     components = components,
     theme = used_theme,
   })
-end
-
-M.setup_winbar = function()
-  feline.winbar.setup({ components = components_winbar })
 end
 
 return M
