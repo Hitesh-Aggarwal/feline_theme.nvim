@@ -26,34 +26,34 @@ This is a opinionated feline config designed to be used as a plugin. It automati
 
 ### Packer:
 
-```
+```lua
 use {
   "Hitesh-Aggarwal/feline_theme.nvim",
   -- after = [Applied colorscheme here]
   config = function()
     require("feline_theme").setup() -- for statusline
-    require("feline_theme").setup_winbar() -- for winbar
+    -- require("feline_theme").setup_winbar() -- for winbar
   end
 }
 ```
 
 ### vim-plug:
 
-```
+```vim
 Plug 'Hitesh-Aggarwal/feline_theme.nvim'
 
 " Anywhere in your config:
 lua << EOF
   config = function()
     require("feline_theme").setup() -- for statusline
-    require("feline_theme").setup_winbar() -- for winbar
+    -- require("feline_theme").setup_winbar() -- for winbar
   end
 EOF
 ```
 
 ### Lazy:
 
-```
+```lua
 return {
   "Hitesh-Aggarwal/feline_theme.nvim",
   -- dependencies = {
@@ -62,41 +62,25 @@ return {
   -- }
   config = function()
     require("feline_theme").setup() -- for statusline
-    require("feline_theme").setup_winbar() -- for winbar
+    -- require("feline_theme").setup_winbar() -- for winbar
   end
 }
 ```
 
 ### Configuration:
 
-```
-local format = function(arg)
-  return "#" .. string.format("%06x", arg)
-end
-
-local giv_foreground = function(group)
-  return format(get_hl(group, true).foreground)
-end
-
-local giv_background = function(group)
-  return format(get_hl(group, true).background)
-end
-
+```lua
 require("feline_theme").setup({
-  fg = giv_foreground("Normal"),
-  bg = giv_background("CursorLine"),
-  bg_dark = giv_background("Normal"),
-  green = giv_foreground("DiffAdded"),
-  yellow = giv_foreground("WarningMsg"),
-  purple = giv_foreground("Special"),
-  orange = giv_foreground("Number"),
-  red = giv_foreground("Error"),
-  blue = giv_foreground("Title"),
-  -- these are the defaults. You can change any color.
-  -- Do add or remove any other colors. Just change the values
-  -- of these predefined colors.
-  -- For example:
-  -- red = "#ff0000"
+-- Change any of these colors. Do no add your own. They will have no effect.
+  -- fg = "#ffffff",
+  -- bg = "#333333",
+  -- bg_dark = "#111111",
+  -- green = "#00ff00",
+  -- yellow = "#ffff00",
+  -- purple = "#a020f0",
+  -- orange = "#ffa500",
+  -- red = "#ff0000",
+  -- blue = "#0000ff",
 })
 ```
 
