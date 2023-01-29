@@ -10,8 +10,6 @@ This is a opinionated feline config designed to be used as a plugin. It automati
 
 ## Screenshots:
 
-#### Statusline
-
 <img src="./screenshot.png">
 
 ## Installation:
@@ -25,7 +23,7 @@ use {
   "Hitesh-Aggarwal/feline_theme.nvim",
   -- after = [Applied colorscheme here]
   config = function()
-    require("feline_theme").setup() -- for statusline
+    require("feline_theme").setup()
   end
 }
 ```
@@ -38,7 +36,7 @@ Plug 'Hitesh-Aggarwal/feline_theme.nvim'
 " Anywhere in your config:
 lua << EOF
   config = function()
-    require("feline_theme").setup() -- for statusline
+    require("feline_theme").setup()
   end
 EOF
 ```
@@ -53,7 +51,7 @@ return {
   -- Or you can set the priority of your colorscheme to 1000 so that it loads first.
   -- }
   config = function()
-    require("feline_theme").setup() -- for statusline
+    require("feline_theme").setup()
   end
 }
 ```
