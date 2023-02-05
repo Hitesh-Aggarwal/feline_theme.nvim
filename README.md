@@ -63,7 +63,6 @@ require("feline_theme").setup({
 -- Change any of these colors. Do no add your own. They will have no effect.
   -- fg = "#ffffff",
   -- bg = "#333333",
-  -- bg_dark = "#111111",
   -- green = "#00ff00",
   -- yellow = "#ffff00",
   -- purple = "#a020f0",
