@@ -5,6 +5,7 @@ end
 local components = {
   active = {
     require("feline_theme.statusline").left,
+    require("feline_theme.statusline").middle,
     require("feline_theme.statusline").right,
   },
   inactive = {

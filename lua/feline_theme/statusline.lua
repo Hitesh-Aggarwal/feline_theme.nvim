@@ -33,6 +33,10 @@ M.left = {
 	provide("diagnostic_info"),
 }
 
+M.middle = {
+  provide({name = "file_info", opts = {type = "relative"}})
+}
+
 M.right = {
 	provide("綠TS", "green", "bg", "bold", "", "block", isTSavailable),
 	provide("lsp_client_names", "fg", "bg", "NONE", "block", "block"),
