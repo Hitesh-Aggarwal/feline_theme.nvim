@@ -2,6 +2,10 @@
 
 This is a opinionated feline config designed to be used as a plugin. It automatically picks colors from applied colorscheme.
 
+### Note: [feline.nvim](https://github.com/feline-nvim/feline.nvim) is archived, so there is no reason for this plugin to stay. Consider moving to [Heirline.nvim](https://github.com/rebelot/heirline.nvim). You can use my config of it.
+
+### Heirline config link: [https://github.com/Hitesh-Aggarwal/nvim/blob/main/lua/user/plugins/statusline.lua](https://github.com/Hitesh-Aggarwal/nvim/blob/main/lua/user/plugins/statusline.lua). This config particulary used catppuccin-mocha theme, but you can change that to suit your favorite colorscheme.
+
 ## Requirements:
 
 - Neovim >= 0.8
